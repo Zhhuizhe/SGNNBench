@@ -1,0 +1,36 @@
+shared:
+  runs: 1
+  epochs: 200
+  eval_step: 20
+  patience: 5
+  seed: 123
+  gpu: 0
+dataset:
+  name: Cora
+  root: none
+  metric_type: accuracy
+  criterion: cross_entropy
+loder:
+  loader_type: neighbor
+  batch_size: 1024
+opt:
+  lr: 0.01
+  gnn_weight_decay: 0.0001
+  trans_weight_decay: 0.001
+model_name: spikegt
+model:
+  hid_channels: 64
+  num_heads: 2
+  drop_rate: 0.1
+  spike_mode: lif
+  T: 4
+  depths: 2
+  graph_weight: 0.5
+  aggregate: add
+  gnn_num_layers: 2
+  gnn_dropout: 0.1
+  gnn_use_act: True
+  gnn_use_bn: True
+  gnn_use_residual: True
+  gnn_use_init: False
+  gnn_use_weight: True

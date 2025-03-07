@@ -1,0 +1,25 @@
+shared:
+  runs: 1
+  epochs: 200
+  eval_step: 20
+  patience: 5
+  seed: 123
+  gpu: 0
+dataset:
+  name: Cora
+  root: none
+  metric_type: accuracy
+  criterion: cross_entropy
+loder:
+  loader_type: neighbor
+  batch_size: 1024
+opt:
+  lr: 0.01
+  wd: 0.001
+model_name: mpnn
+model:
+  hid_channels: 128
+  T: 20
+  v_threshold: 1.0
+  K: 6
+  bn: True
