@@ -113,7 +113,7 @@ def exp():
                 break
         val_accs.append(val_acc)
         test_accs.append(test_acc)
-    logger.info(f"Final ACC: {np.mean(best_test_acc):.4%}±{100*np.std(best_test_acc):.4f}")
+    logger.info(f"Final ACC: {np.mean(test_accs):.4%}±{100*np.std(test_accs):.4f}")
     return np.mean(val_accs)
 
 
