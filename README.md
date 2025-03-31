@@ -13,5 +13,5 @@ The following exemplary SGNNs have been implementated:
 |SpikeGT|SpikeGraphormer A High-Performance Graph Transformer with Spiking Graph Attention|✅|✅||
 |MSG|Spiking Graph Neural Network on Riemannian Manifolds|✅|✅||
 |DRSGNN|Dynamic Reactive Spiking Graph Neural Network|✅|✅||
-|SiGNN|Exploiting spiking dynamics with spatial-temporal feature normalization in graph learning|✅|✅|||
+|SiGNN|SiGNN: A spike-induced graph neural network for dynamic graph representation learning|✅|✅|||
 
