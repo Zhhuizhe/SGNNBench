@@ -15,3 +15,5 @@ The following exemplary SGNNs have been implemented:
 |DRSGNN|Dynamic Reactive Spiking Graph Neural Network|✅|✅||
 |SiGNN|SiGNN: A spike-induced graph neural network for dynamic graph representation learning|✅|✅|||
 
+## Contact
+To ask questions or report issues, please open an issue on the [issues tracker](https://github.com/Zhhuizhe/SGNNBenchmark/issues).
