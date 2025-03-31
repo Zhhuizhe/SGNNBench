@@ -1,7 +1,7 @@
 # SGNNBenchmark
 
 ## Methods
-The following exemplary SGNNs have been implementated:
+The following exemplary SGNNs have been implemented:
 
 |Method|Paper|Pytorch|PyG|DGL|
 |-|-|-|-|-|
