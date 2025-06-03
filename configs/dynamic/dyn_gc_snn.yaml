@@ -1,0 +1,25 @@
+shared:
+  runs: 5
+  epochs: 200
+  eval_step: 20
+  patience: 5
+  seed: 123
+  gpu: 0
+  log_dir: ./logs
+dataset:
+  name: dblp
+  root: ./data
+  splits: 0.4
+loader:
+  batch_size: 2048
+opt:
+  lr: 0.001
+  wd: 0.001
+model:
+  model_name: stfn
+  hids: [512, 10]
+  sizes: [5, 2]
+  neuron: LIF
+  v_threshold: 0.5
+  p: 1.0
+  dropout: 0.5

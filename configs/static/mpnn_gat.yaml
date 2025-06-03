@@ -1,0 +1,32 @@
+shared:
+  runs: 5
+  epochs: 200
+  eval_step: 20
+  patience: 5
+  seed: 123
+  gpu: 0
+  log_dir: ./logs
+loader:
+  enable_loader: False
+  loader_type: neighbor
+  batch_size: 1024
+  enable_feat_norm: False
+  return_sparse: False
+dataset:
+  name: Cora # Minesweeper and Questions use binary_cross_entropy
+  root: ./data
+  metric_type: acc
+  criterion: cross_entropy
+opt:
+  lr: 0.01
+  wd: 0.0
+model:
+  model_name: mpnn
+  conv_type: gat
+  hid_channels: 128
+  dropout: 0.2
+  num_layers: 1
+  heads: 4
+  enable_norm: False
+  enable_res: False
+  enable_pre_lin: False

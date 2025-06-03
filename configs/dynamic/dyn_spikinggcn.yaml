@@ -1,0 +1,26 @@
+shared:
+  runs: 5
+  epochs: 200
+  eval_step: 20
+  patience: 5
+  seed: 123
+  gpu: 0
+  log_dir: ./logs
+dataset:
+  name: dblp
+  root: ./data
+  splits: 0.4
+loader:
+  batch_size: 2048
+opt:
+  lr: 0.01
+  wd: 0.0
+model:
+  model_name: spikinggcn
+  hid_channels: 64
+  K: 2
+  neuron: LIF
+  v_threshold: 0.5
+  tau: 1.0
+  dropout: 0.4
+  enable_norm: False

@@ -1,0 +1,25 @@
+shared:
+  runs: 5
+  epochs: 200
+  eval_step: 20
+  patience: 5
+  seed: 123
+  gpu: 0
+  log_dir: ./logs
+dataset:
+  name: dblp
+  root: ./data
+  splits: 0.4
+loader:
+  batch_size: 2048
+opt:
+  lr: 0.005
+  wd: 0.0
+model:
+  model_name: spikenet
+  hids: [512, 10]
+  sizes: [5, 2]
+  p: 1.0
+  v_threshold: 1.0
+  neuron: LIF
+  dropout: 0.7

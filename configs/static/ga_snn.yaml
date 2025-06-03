@@ -1,0 +1,34 @@
+shared:
+  runs: 5
+  epochs: 200
+  eval_step: 20
+  patience: 5
+  seed: 123
+  gpu: 0
+  log_dir: ./logs
+dataset:
+  name: Cora
+  root: ./data
+  metric_type: acc
+  criterion: cross_entropy
+  enable_feat_norm: False
+  return_sparse: False
+loader:
+  enable_loader: False
+  loader_type: neighbor
+  batch_size: 1024
+opt:
+  lr: 0.01
+  wd: 0.001
+model:
+  model_name: stfn
+  hid_channels: 256
+  neuron: LIF
+  T: 20
+  v_threshold: 0.5
+  backbone: gat
+  num_heads: 4
+  num_layers: 2
+  norm: stfn
+  enable_res: False
+  enable_jk: False

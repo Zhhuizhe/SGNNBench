@@ -1,0 +1,26 @@
+shared:
+  runs: 5
+  epochs: 200
+  eval_step: 20
+  patience: 5
+  seed: 123
+  gpu: 0
+  log_dir: ./logs
+dataset:
+  name: dblp
+  root: ./data
+  splits: 0.4
+loader:
+  batch_size: 2048
+opt:
+  lr: 0.005
+  wd: 0.0
+model:
+  model_name: spikegt
+  hid_channels: 128
+  hids: [128]
+  sizes: [5]
+  depths: 1
+  num_heads: 2
+  dropout: 0.0
+  graph_weight: 0.8

@@ -1,0 +1,36 @@
+shared:
+  runs: 5
+  epochs: 200
+  eval_step: 20
+  patience: 5
+  seed: 123
+  gpu: 0
+  log_dir: ./logs
+dataset:
+  name: Cora
+  root: ./data
+  metric_type: acc
+  criterion: cross_entropy
+  enable_feat_norm: False
+  return_sparse: False
+loader:
+  enable_loader: False
+  loader_type: neighbor
+  batch_size: 1024
+opt:
+  lr: 0.01
+  wd: 0.0
+model:
+  model_name: msg
+  T: 20
+  num_layers: 2
+  step_size: 0.01
+  manifold: [lorentz]
+  embed_dim: [32]
+  v_threshold: 5.0
+  dropout: 0.5
+  neuron: LIF
+  delta: 0.05
+  tau: 2.0
+  use_product: False
+  use_MS: True
