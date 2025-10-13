@@ -1,4 +1,13 @@
-# SGNNBenchmark
+# SGNNBench
+
+## Link Prediction
+![link prediction](./img/lp.png "link prediction")
+
+## Node Classification on Homophily datasets
+![link prediction](./img/nc_homo.png "")
+
+## Node Classification on Heterophily datasets
+![link prediction](./img/nc_hetero.png "")
 
 ## Methods
 The following exemplary SGNNs have been implemented:
