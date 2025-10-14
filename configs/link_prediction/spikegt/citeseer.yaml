@@ -5,12 +5,12 @@ shared:
   patience: 5
   seed: 123
   gpu: 0
-  log_dir: /home/hzzhang/SGNNBenchmark/logs/spikegt
   device: cuda:2
+  log_dir: ./logs
 dataset:
   name: Citeseer
   task: lp
-  root: /home/hzzhang/public_data/pyg_data
+  root: ./data
   metric_type: acc
   criterion: cross_entropy
 loader:

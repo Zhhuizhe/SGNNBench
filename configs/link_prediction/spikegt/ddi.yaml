@@ -5,12 +5,12 @@ shared:
   patience: 5
   seed: 123
   gpu: 0
-  log_dir: /home/hzzhang/SGNNBenchmark/logs/spikegt
+  log_dir: ./logs
   device: cuda:2
 dataset:
   name: ogbl-ddi
   task: lp
-  root: /home/hzzhang/public_data/pyg_data
+  root: ./data
   metric_type: acc
   criterion: cross_entropy
   enable_sparse: False

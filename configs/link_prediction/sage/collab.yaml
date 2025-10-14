@@ -5,25 +5,21 @@ shared:
   patience: 5
   seed: 123
   gpu: 0
-  log_dir: /home/hzzhang/SGNNBenchmark/logs/sage
   device: cuda:2
-
+  log_dir: ./logs
 loader:
   enable_loader: False
   loader_type: neighbor
   batch_size: 1024
-
 dataset:
   name: ogbl-collab
-  root: /home/hzzhang/public_data/pyg_data
+  root: ./data
   metric_type: acc
   criterion: cross_entropy
   enable_sparse: False
-
 opt:
   lr: 0.001
   wd: 0.0
-
 model:
   model_name: mpnn
   conv_type: sage

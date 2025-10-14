@@ -5,8 +5,8 @@ shared:
   patience: 5
   seed: 123
   gpu: 0
-  log_dir: /home/hzzhang/SGNNBenchmark/logs/msg
   device: cuda:0
+  log_dir: ./logs
 dataset:
   name: ogbl-ddi
   task: lp
@@ -26,8 +26,8 @@ model:
   T: 5
   num_layers: 2
   step_size: 1.0
-  manifold: [euclidean]  # 调整为列表格式
-  embed_dim: [64]        # 调整为列表格式
+  manifold: [euclidean]
+  embed_dim: [64]      
   v_threshold: 1.0
   dropout: 0.1
   neuron: LIF

@@ -5,7 +5,7 @@ shared:
   patience: 10
   seed: 123
   gpu: 0
-  log_dir: /home/hzzhang/SGNNBenchmark/logs/spikenet
+  log_dir: ./logs
 dataset:
   name: ogbl-ddi
   root: ./data
@@ -32,39 +32,3 @@ model:
   dropout: 0.0
   concat: False
   enable_pre_lin: False
-
-# Cora
-# Namespace(T=20, aggr='mean', alpha=1.0, batch_size=1024, concat=False, config_dir='../configs_static/spikenet.yaml', criterion='cross_entropy', dropout=0.6, epochs=200, eval_step=20, gpu=0, hids=[128, 64], loader_type='neighbor', log_dir='../logs', lr=0.001, metric_type='accuracy', model_name='spikenet', name='Cora', neuron='LIF', patience=5, root='/home/hzzhang/public_data/pyg_data', runs=3, sampler='sage', seed=123, sizes=[5, 2], surrogate='arctan', wd=0.0001)
-
-# Citeseer
-# Namespace(T=20, aggr='mean', alpha=1.0, batch_size=1024, concat=False, config_dir='../configs_static/spikenet.yaml', criterion='cross_entropy', dropout=0.6, epochs=200, eval_step=20, gpu=0, hids=[128, 64], loader_type='neighbor', log_dir='../logs', lr=0.001, metric_type='accuracy', model_name='spikenet', name='Citeseer', neuron='LIF', patience=5, root='/home/hzzhang/public_data/pyg_data', runs=3, sampler='sage', seed=123, sizes=[5, 2], surrogate='arctan', wd=0.001)
-
-# Pubmed
-# Namespace(T=20, aggr='mean', alpha=1.0, batch_size=1024, concat=False, config_dir='../configs_static/spikenet.yaml', criterion='cross_entropy', dropout=0.2, epochs=200, eval_step=20, gpu=0, hids=[128, 64], loader_type='neighbor', log_dir='../logs', lr=0.001, metric_type='accuracy', model_name='spikenet', name='Pubmed', neuron='LIF', patience=5, root='/home/hzzhang/public_data/pyg_data', runs=3, sampler='sage', seed=123, sizes=[5, 2], surrogate='arctan', wd=0.1)
-
-# Computers
-# Namespace(T=20, aggr='mean', alpha=1.0, batch_size=1024, concat=False, config_dir='../configs_static/spikenet.yaml', criterion='cross_entropy', dropout=0.6, epochs=200, eval_step=20, gpu=0, hids=[128, 64], loader_type='neighbor', log_dir='../logs', lr=0.001, metric_type='accuracy', model_name='spikenet', name='Computers', neuron='LIF', patience=5, root='/home/hzzhang/public_data/pyg_data', runs=3, sampler='sage', seed=123, sizes=[5, 2], surrogate='arctan', wd=0.0001)
-
-# Photo
-# Namespace(T=20, aggr='mean', alpha=1.0, batch_size=1024, concat=False, config_dir='../configs_static/spikenet.yaml', criterion='cross_entropy', dropout=0.2, epochs=200, eval_step=20, gpu=0, hids=[128, 64], loader_type='neighbor', log_dir='../logs', lr=0.001, metric_type='accuracy', model_name='spikenet', name='Photo', neuron='LIF', patience=5, root='/home/hzzhang/public_data/pyg_data', runs=3, sampler='sage', seed=123, sizes=[5, 2], surrogate='arctan', wd=0.01)
-
-# CS
-# Namespace(T=20, aggr='mean', alpha=1.0, batch_size=1024, concat=False, config_dir='../configs_static/spikenet.yaml', criterion='cross_entropy', dropout=0.0, epochs=200, eval_step=20, gpu=1, hids=[128, 64], loader_type='neighbor', log_dir='../logs', lr=0.001, metric_type='accuracy', model_name='spikenet', name='CS', neuron='LIF', patience=5, root='/home/hzzhang/public_data/pyg_data', runs=3, sampler='sage', seed=123, sizes=[5, 2], surrogate='arctan', wd=0.0001)
-
-# Physics
-# Namespace(T=20, aggr='mean', alpha=1.0, batch_size=1024, concat=False, config_dir='../configs_static/spikenet.yaml', criterion='cross_entropy', dropout=0.2, epochs=200, eval_step=20, gpu=1, hids=[128, 64], loader_type='neighbor', log_dir='../logs', lr=0.0001, metric_type='accuracy', model_name='spikenet', name='Physics', neuron='LIF', patience=5, root='/home/hzzhang/public_data/pyg_data', runs=3, sampler='sage', seed=123, sizes=[5, 2], surrogate='arctan', wd=0.1)
-
-# ogbn-arxiv
-# Namespace(lr=0.001, wd=0.001, model_name='spikenet', sizes=(10, 8), hids=(256, 128), aggr='mean', sampler='sage', neuron='LIF', T=20, surrogate='arctan', alpha=1.0, dropout=0.0, concat=False, enable_pre_lin=True)
-
-# Squirrel
-
-# Chameleon
-
-# Amazon-ratings
-
-# Roman-empire
-
-# Minesweeper
-
-# Questions
