@@ -1,0 +1,38 @@
+shared:
+  runs: 5
+  epochs: 300
+  eval_step: 20
+  patience: 5
+  seed: 123
+  gpu: 0
+  log_dir: /home/hzzhang/SGNNBenchmark/logs/msg
+  device: cuda:0
+dataset:
+  name: ogbl-ddi
+  task: lp
+  root: ./data
+  metric_type: acc
+  criterion: cross_entropy
+  enable_sparse: False
+loader:
+  enable_loader: False
+  loader_type: neighbor
+  batch_size: 1024
+opt:
+  lr: 0.001
+  wd: 0.1
+model:
+  model_name: msg
+  T: 5
+  num_layers: 2
+  step_size: 1.0
+  manifold: [euclidean]  # 调整为列表格式
+  embed_dim: [64]        # 调整为列表格式
+  v_threshold: 1.0
+  dropout: 0.1
+  neuron: LIF
+  delta: 0.05
+  tau: 2.0
+  use_product: False
+  use_MS: True
+  hid_channels: 64

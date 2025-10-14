@@ -1,0 +1,37 @@
+shared:
+  runs: 5
+  epochs: 500
+  eval_step: 20
+  patience: 10
+  seed: 123
+  gpu: 0
+  log_dir: /home/hzzhang/SGNNBenchmark/logs/gcsnn
+  device: cuda:2
+dataset:
+  name: ogbl-ddi
+  task: lp
+  root: ./data
+  metric_type: acc
+  criterion: cross_entropy
+  enable_feat_norm: False
+  enable_sparse: False
+  enable_one_hot: True
+loader:
+  enable_loader: False
+  loader_type: neighbor
+  batch_size: 1024
+  num_neighbors: 2
+opt:
+  lr: 0.001
+  wd: 0.0
+model:
+  model_name: stfn
+  hid_channels: 512
+  neuron: LIF
+  T: 20
+  v_threshold: 0.5
+  backbone: gcn
+  num_layers: 1
+  norm: stfn
+  enable_residual: False
+  enable_jk: False

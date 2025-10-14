@@ -1,0 +1,35 @@
+shared:
+  runs: 5
+  epochs: 300
+  eval_step: 20
+  patience: 5
+  seed: 123
+  gpu: 0
+  log_dir: /home/hzzhang/SGNNBenchmark/logs/spikinggcn
+  device: cuda:2
+dataset:
+  name: ogbl-ddi
+  task: lp
+  root: ./data
+  metric_type: acc
+  criterion: cross_entropy
+  enable_feat_norm: False
+  enable_sparse: False
+loader:
+  enable_loader: False
+  loader_type: neighbor
+  batch_size: 1024
+opt:
+  lr: 0.001
+  wd: 0.0001
+model:
+  model_name: spikinggcn
+  hid_channels: 128
+  num_layers: 2
+  neuron: LIF
+  T: 5
+  v_threshold: 1.0
+  K: 2
+  norm: bn
+  enable_res: False
+  enable_jk: False

@@ -1,0 +1,33 @@
+shared:
+  runs: 5
+  epochs: 300
+  eval_step: 20
+  patience: 10
+  seed: 123
+  gpu: 0
+  log_dir: /home/hzzhang/SGNNBenchmark/logs/sgc
+  device: cuda:2
+loader:
+  enable_loader: False
+  loader_type: neighbor
+  batch_size: 1024
+dataset:
+  name: Citeseer
+  root: /home/hzzhang/public_data/pyg_data
+  metric_type: acc
+  criterion: cross_entropy
+  enable_sparse: False
+opt:
+  lr: 0.001
+  wd: 0.0001
+model:
+  model_name: mpnn
+  conv_type: sgc
+  hid_channels: 256
+  dropout: 0.0
+  num_layers: 1
+  K: 2
+  norm_type: ln
+  enable_res: True
+  enable_jk: False
+  enable_pre_lin: False

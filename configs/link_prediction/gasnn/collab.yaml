@@ -1,0 +1,36 @@
+shared:
+  runs: 5
+  epochs: 0
+  eval_step: 0
+  patience: 0
+  seed: 123
+  gpu: 0
+  log_dir: /home/hzzhang/SGNNBenchmark/logs/gasnn
+  device: cuda:2
+dataset:
+  name: ogbl-collab
+  task: lp
+  root: ./data
+  metric_type: acc
+  criterion: cross_entropy
+  enable_feat_norm: False
+loader:
+  enable_loader: False
+  loader_type: neighbor
+  batch_size: 1024
+  num_neighbors: 2
+opt:
+  lr: 0.0
+  wd: 0.0
+model:
+  model_name: stfn
+  hid_channels: 0
+  neuron: LIF
+  T: 0
+  v_threshold: 0.0
+  backbone: gat
+  num_heads: 0
+  num_layers: 0
+  norm: stfn
+  enable_res: False
+  enable_jk: False

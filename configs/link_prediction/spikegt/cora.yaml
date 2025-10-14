@@ -1,0 +1,42 @@
+shared:
+  runs: 2
+  epochs: 200
+  eval_step: 20
+  patience: 5
+  seed: 123
+  gpu: 1
+  log_dir: /home/hzzhang/SGNNBenchmark/logs/spikegt
+  device: cuda:2
+dataset:
+  name: Cora
+  task: lp
+  root: /home/hzzhang/public_data/pyg_data
+  metric_type: acc
+  criterion: cross_entropy
+  enable_sparse: False
+loader:
+  enable_loader: False
+  loader_type: neighbor
+  batch_size: 1024
+opt:
+  lr: 0.001
+  wd: 0.001
+  gnn_weight_decay: 0.0001
+  trans_weight_decay: 0.001
+model:
+  model_name: spikegt
+  hid_channels: 256
+  num_heads: 2
+  drop_rate: 0.4
+  spike_mode: LIF
+  T: 2
+  trans_num_layers: 2
+  graph_weight: 0.5
+  aggregate: add
+  gnn_num_layers: 4
+  gnn_dropout: 0.4
+  gnn_use_act: True
+  gnn_use_bn: True
+  gnn_use_residual: True
+  gnn_use_init: True
+  gnn_use_weight: True

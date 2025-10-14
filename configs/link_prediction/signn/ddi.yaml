@@ -1,0 +1,70 @@
+shared:
+  runs: 2
+  epochs: 800
+  eval_step: 40
+  patience: 10
+  seed: 123
+  gpu: 0
+  log_dir: /home/hzzhang/SGNNBenchmark/logs/signn
+dataset:
+  name: ogbl-ddi
+  root: ./data
+  metric_type: acc
+  criterion: cross_entropy
+  enable_sparse: False
+loader:
+  enable_loader: False
+  loader_type: neighbor
+  batch_size: 99999999
+opt:
+  lr: 0.2
+  wd: 0.1
+model:
+  model_name: signn
+  sizes: [5, 2]
+  hids: [128, 64]
+  nchannels: 3
+  T: 9 # Notice: T has to be divisible by 3
+  v_threshold: 1.0
+  alpha: 1.0
+  p: 0.5
+  dropout: 0.0
+  aggr: mean
+  sampler: sage
+  neuron: BLIF
+  surrogate: arctan
+  concat: False
+  enable_pre_lin: False
+
+# Cora
+# Namespace(T=12, aggr='mean', alpha=1.0, batch_size=1024, concat=False, config_dir='./configs_static/signn.yaml', criterion='cross_entropy', dropout=0.6, epochs=200, eval_step=20, gpu=1, hids=[128, 32], loader_type='neighbor', log_dir='./logs', lr=0.01, metric_type='accuracy', model_name='signn', name='Cora', nchannels=3, neuron='BLIF', p=0.5, patience=5, root='/home/hzzhang/public_data/pyg_data', runs=3, sampler='sage', seed=123, sizes=[5, 2], surrogate='arctan', v_threshold=1.0, wd=0.1)
+
+# Citeseer
+# Namespace(T=12, aggr='mean', alpha=1.0, batch_size=1024, concat=False, config_dir='./configs_static/signn.yaml', criterion='cross_entropy', dropout=0.6, epochs=200, eval_step=20, gpu=1, hids=[128, 32], loader_type='neighbor', log_dir='./logs', lr=0.1, metric_type='accuracy', model_name='signn', name='Citeseer', nchannels=3, neuron='BLIF', p=0.5, patience=5, root='/home/hzzhang/public_data/pyg_data', runs=3, sampler='sage', seed=123, sizes=[5, 2], surrogate='arctan', v_threshold=1.0, wd=0.1)
+
+# Pubmed
+# Namespace(T=18, aggr='mean', alpha=1.0, batch_size=1024, concat=False, config_dir='./configs_static/signn.yaml', criterion='cross_entropy', dropout=0.4, epochs=200, eval_step=20, gpu=1, hids=[128, 32], loader_type='neighbor', log_dir='./logs', lr=0.01, metric_type='accuracy', model_name='signn', name='Pubmed', nchannels=3, neuron='BLIF', p=0.5, patience=5, root='/home/hzzhang/public_data/pyg_data', runs=3, sampler='sage', seed=123, sizes=[5, 2], surrogate='arctan', v_threshold=1.0, wd=0.01)
+
+# Computers
+# Namespace(T=21, aggr='mean', alpha=1.0, batch_size=1024, concat=False, config_dir='./configs_static/signn.yaml', criterion='cross_entropy', dropout=0.0, epochs=200, eval_step=20, gpu=1, hids=[128, 32], loader_type='neighbor', log_dir='./logs', lr=0.001, metric_type='accuracy', model_name='signn', name='Computers', nchannels=3, neuron='BLIF', p=0.5, patience=5, root='/home/hzzhang/public_data/pyg_data', runs=3, sampler='sage', seed=123, sizes=[5, 2], surrogate='arctan', v_threshold=1.0, wd=0.0001)
+
+# Photo
+# Namespace(T=9, aggr='mean', alpha=1.0, batch_size=1024, concat=False, config_dir='./configs_static/signn.yaml', criterion='cross_entropy', dropout=0.0, epochs=200, eval_step=20, gpu=1, hids=[128, 32], loader_type='neighbor', log_dir='./logs', lr=0.01, metric_type='accuracy', model_name='signn', name='Photo', nchannels=3, neuron='BLIF', p=0.5, patience=5, root='/home/hzzhang/public_data/pyg_data', runs=3, sampler='sage', seed=123, sizes=[5, 2], surrogate='arctan', v_threshold=1.0, wd=0.001)
+
+# CS
+# Namespace(T=21, aggr='mean', alpha=1.0, batch_size=1024, concat=False, config_dir='./configs_static/signn.yaml', criterion='cross_entropy', dropout=0.0, epochs=200, eval_step=20, gpu=1, hids=[128, 32], loader_type='neighbor', log_dir='./logs', lr=0.1, metric_type='accuracy', model_name='signn', name='CS', nchannels=3, neuron='BLIF', p=0.5, patience=5, root='/home/hzzhang/public_data/pyg_data', runs=3, sampler='sage', seed=123, sizes=[5, 2], surrogate='arctan', v_threshold=1.0, wd=0.01)
+
+# Physics
+# Namespace(T=21, aggr='mean', alpha=1.0, batch_size=1024, concat=False, config_dir='./configs_static/signn.yaml', criterion='cross_entropy', dropout=0.2, epochs=200, eval_step=20, gpu=0, hids=[128, 32], loader_type='neighbor', log_dir='./logs', lr=0.001, metric_type='accuracy', model_name='signn', name='Physics', nchannels=3, neuron='BLIF', p=0.5, patience=5, root='/home/hzzhang/public_data/pyg_data', runs=3, sampler='sage', seed=123, sizes=[5, 2], surrogate='arctan', v_threshold=1.0, wd=0.0001)
+
+# Squirrel
+
+# Chameleon
+
+# Amazon-ratings
+
+# Roman-empire
+
+# Minesweeper
+
+# Questions

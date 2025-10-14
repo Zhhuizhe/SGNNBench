@@ -1,0 +1,36 @@
+shared:
+  runs: 5
+  epochs: 500
+  eval_step: 20
+  patience: 5
+  seed: 123
+  gpu: 0
+  log_dir: /home/hzzhang/SGNNBenchmark/logs/spikegcl
+  device: cuda:2
+dataset:
+  name: Pubmed
+  task: lp
+  root: /home/hzzhang/public_data/pyg_data
+  metric_type: acc
+  criterion: cross_entropy
+loader:
+  enable_loader: False
+  loader_type: neighbor
+  batch_size: 1024
+opt:
+  lr: 0.0
+  wd: 0.0
+  margin: 0.5
+model:
+  model_name: spikegcl
+  hid_channels: 256
+  T: 10
+  v_threshold: 0.00001
+  alpha: 2.0
+  dropout: 0.6
+  dropedge: 0.4
+  surrogate: sigmoid
+  neuron: LIF
+  reset: subtract
+  act: elu
+  bn: True

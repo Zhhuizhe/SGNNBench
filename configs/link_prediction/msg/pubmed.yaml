@@ -1,0 +1,36 @@
+shared:
+  runs: 5
+  epochs: 200
+  eval_step: 20
+  patience: 5
+  seed: 123
+  gpu: 0
+  log_dir: /home/hzzhang/SGNNBenchmark/logs/msg
+  device: cuda:0
+dataset:
+  name: Pubmed
+  task: lp
+  root: ./data
+  metric_type: acc
+  criterion: cross_entropy
+loader:
+  enable_loader: False
+  loader_type: neighbor
+  batch_size: 1024
+opt:
+  lr: 0.01
+  wd: 0.0
+model:
+  model_name: msg
+  T: 10
+  num_layers: 2
+  step_size: 1.0
+  manifold: [euclidean]  # 调整为列表格式
+  embed_dim: [256]       # 调整为列表格式
+  v_threshold: 5.0
+  dropout: 0.5
+  neuron: LIF
+  delta: 0.05
+  tau: 2.0
+  use_product: False
+  use_MS: True
